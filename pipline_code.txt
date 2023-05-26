@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    triggers{
+        pollSCM('H/2 * * * *')
+    }
+    stages {
+        stage('Clone Git') {
+            steps {
+                git branch: 'main', credentialsId: 'ef2a60b7-c8b3-45c2-b01c-58650f2d6542', url: 'https://github.com/samin-irtiza-bjit/TetrisPHP'
+            }
+        }
+        
+        stage ('Run Playbook'){
+            steps{
+                ansiblePlaybook become: true, colorized: true, credentialsId: 'ef2a60b7-c8b3-45c2-b01c-58650f2d6542', installation: 'Ansible_2.9', inventory: '/etc/ansible/hosts', playbook: '/opt/Ansible_Project/project.yml'
+            }
+        }
+    }
+}

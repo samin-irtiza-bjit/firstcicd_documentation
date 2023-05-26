@@ -1,0 +1,84 @@
+.
+├── project.yml
+└── roles
+    ├── db
+    │   ├── defaults
+    │   │   └── main.yml
+    │   ├── files
+    │   │   ├── db-load-script.sql
+    │   │   └── my.cnf
+    │   ├── handlers
+    │   │   └── main.yml
+    │   ├── meta
+    │   │   └── main.yml
+    │   ├── README.md
+    │   ├── tasks
+    │   │   └── main.yml
+    │   ├── templates
+    │   ├── tests
+    │   │   ├── inventory
+    │   │   └── test.yml
+    │   └── vars
+    │       └── main.yml
+    └── web
+        ├── defaults
+        │   └── main.yml
+        ├── files
+        ├── handlers
+        │   └── main.yml
+        ├── meta
+        │   └── main.yml
+        ├── README.md
+        ├── tasks
+        │   └── main.yml
+        ├── templates
+        ├── tests
+        │   ├── inventory
+        │   └── test.yml
+        └── vars
+            └── main.yml
+
+19 directories, 19 files
+[root@ansible-master Ansible_Project]#
+[root@ansible-master Ansible_Project]# tree
+.
+├── project.yml
+└── roles
+    ├── db
+    │   ├── defaults
+    │   │   └── main.yml
+    │   ├── files
+    │   │   ├── db-load-script.sql
+    │   │   └── my.cnf
+    │   ├── handlers
+    │   │   └── main.yml
+    │   ├── meta
+    │   │   └── main.yml
+    │   ├── README.md
+    │   ├── tasks
+    │   │   └── main.yml
+    │   ├── templates
+    │   ├── tests
+    │   │   ├── inventory
+    │   │   └── test.yml
+    │   └── vars
+    │       └── main.yml
+    └── web
+        ├── defaults
+        │   └── main.yml
+        ├── files
+        ├── handlers
+        │   └── main.yml
+        ├── meta
+        │   └── main.yml
+        ├── README.md
+        ├── tasks
+        │   └── main.yml
+        ├── templates
+        ├── tests
+        │   ├── inventory
+        │   └── test.yml
+        └── vars
+            └── main.yml
+
+19 directories, 19 files

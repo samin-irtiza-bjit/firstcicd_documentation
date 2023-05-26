@@ -1,0 +1,6 @@
+{
+    "ansible.python.interpreterPath": "c:\\Python311\\python.exe",
+    "markdown-preview-github-styles.darkTheme": "dark_colorblind",
+    "markdown-pdf.includeDefaultStyles": true,
+    "markdown-pdf.highlightStyle": "github-gist.css"
+}
