@@ -45,6 +45,7 @@ sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/
 sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io-2023.key
 ```
 
+
 ### Jenkins Setup
 
 After installation go to the browser of your host machine and input the following url in the address bar:
@@ -72,6 +73,8 @@ Go to **`Manage Jenkins > Global Tool Configuration`** and modify the settings a
 <p align='center'>
 <img src="global_tool_config.png"></br></p>
 
+
+
 ### Pipeline Setup
 
 Create a new pipeline job from the jenkins dashboard. Go to **`Configuration`** menu of the project. Now set up the pipeline and additional configuration
@@ -79,6 +82,8 @@ Create a new pipeline job from the jenkins dashboard. Go to **`Configuration`** 
 <p align='center'>
 <img src="pipeline.png"></p>
 
+
+<div style="page-break-after: always;"></div>
 
 ### Pipeline Script
 
@@ -105,7 +110,6 @@ pipeline {
 
 ```
 
-<div style="page-break-after: always;"></div>
 
 ### Ansible Installation
 
@@ -175,6 +179,7 @@ server to its nodes communication will be passwordless.
 ssh-copy-id root@192.168.56.111 [Web Server IP]
 ssh-copy-id root@192.168.56.110 [Database Server IP]
 ```
+
 <div style="page-break-after: always;"></div>
 
 ## Ansible Playbook Codes
@@ -222,7 +227,6 @@ ssh-copy-id root@192.168.56.110 [Database Server IP]
     - web
 
 ```
-<div style="page-break-after: always;"></div>
 
 ### roles/db/tasks/main.yml
 ```yaml
@@ -266,7 +270,6 @@ ssh-copy-id root@192.168.56.110 [Database Server IP]
   shell: mysql -f < /tmp/db-load-script.sql
   tags: run sql
 ```
-<div style="page-break-after: always;"></div>
 
 ### roles/db/vars/main.yml
 ```yaml
@@ -313,7 +316,6 @@ pid-file=/var/run/mariadb/mariadb.pid
 !includedir /etc/my.cnf.d
 ```
 
-<div style="page-break-after: always;"></div>
 
 ### roles/web/tasks/main.yml
 ```yaml
@@ -359,7 +361,6 @@ pid-file=/var/run/mariadb/mariadb.pid
     force: yes
 ```
 
-<div style="page-break-after: always;"></div>
 
 ### roles/web/vars/main.yml
 ```yaml
@@ -379,7 +380,6 @@ If everything is set up correctly, jenkins should start an auto build and deploy
 <p align='center'>
 <img src="poll_proof.png"></p></br>
 
-<div style="page-break-after: always;"></div>
 
 ### Playbook output from the pipeline
 
