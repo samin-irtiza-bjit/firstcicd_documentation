@@ -184,6 +184,13 @@ ssh-copy-id root@192.168.56.110 [Database Server IP]
 
 ## Ansible Playbook Codes
 
+Ansible roles can be created with the following commands:
+
+```
+ansible-galaxy init roles/db
+ansible-galaxy init roles/web
+```
+
 ### Ansible Roles Playbook Folder Structure
 
 ```
